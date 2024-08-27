@@ -7,13 +7,14 @@ import TrackTrucks from './pages/TrackTrucks/TrackTrucks';
 import Alerts from './pages/AlertWarning/Alerts';
 import Advisories from './pages/Advisories/Advisories';
 import Navbar from './components/Navbar/Navbar';
+import DisasterAnalysis from './pages/DisasterAnalysis/DisasterAnalysis';
 
 
 
 const Layout = () => {
   return (
-    <div className="container">
-      <div className="menuContainer"><Menu /></div>
+    <div className='MainContainer'>
+      <div className="menuContainer "><Menu /></div>
       <div className="contentContainer">
         <Outlet />
       </div>
@@ -31,6 +32,7 @@ function App() {
         <Route path='/' element={<Auth />} />
         <Route path="/home" element={<Layout />}>
           <Route index element={<Home />} /> 
+          <Route path='/home/disasteranalysis' element={<DisasterAnalysis />} />
           <Route path='/home/verifysos' element={<VerifySos />} />
           <Route path='/home/advisories' element={<Advisories />} />
           <Route path='/home/track' element={<TrackTrucks />} />
