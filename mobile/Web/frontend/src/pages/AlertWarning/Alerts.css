@@ -1,0 +1,28 @@
+.AlertsMain {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 2rem;
+}
+
+.lowLevel {
+    border: 2px solid rgb(255, 255, 0) !important;
+    margin-bottom: 1rem;
+}
+
+
+.highLevel {
+    border: 2px solid red !important;
+    margin-bottom: 1rem;
+}
+
+.SubmittedAlerts {
+    width: 80%;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.SubmittedAlerts h3 {
+    margin-bottom: 1rem;
+}

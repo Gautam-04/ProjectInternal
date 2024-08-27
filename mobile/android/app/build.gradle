@@ -1,0 +1,22 @@
+android {
+    compileSdkVersion 33 // Ensure this is compatible with your tools
+    defaultConfig {
+        applicationId "com.example.trial"
+        minSdkVersion 21
+        targetSdkVersion 33
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    // Other dependencies
+}
