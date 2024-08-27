@@ -6,6 +6,8 @@ import VerifySos from './pages/VerifySos/VerifySos';
 import TrackTrucks from './pages/TrackTrucks/TrackTrucks';
 import Alerts from './pages/AlertWarning/Alerts';
 import Advisories from './pages/Advisories/Advisories';
+import Navbar from './components/Navbar/Navbar';
+
 
 
 const Layout = () => {
@@ -24,6 +26,7 @@ const Layout = () => {
 function App() {
   return (
     <>
+      <Navbar />
       <Routes>
         <Route path='/' element={<Auth />} />
         <Route path="/home" element={<Layout />}>
