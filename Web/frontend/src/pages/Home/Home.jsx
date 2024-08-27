@@ -1,5 +1,6 @@
 import React from 'react'
 import { useUser } from '../../context/UserProvider'
+import './Home.css'
 
 function Home() {
   const {user}  = useUser();
