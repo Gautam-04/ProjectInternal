@@ -1,15 +1,16 @@
 import React from "react";
 import { BsFillMegaphoneFill } from "react-icons/bs";
-
+import "./AddAdvisory.css"; 
 const AddAdvisory = ({ handleChange, handleSubmit, advisory }) => {
   return (
-    <div className="advisories-container">
+    <div className="add-advisory-container">
       <h2 className="header">Add New Advisory</h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="advisory-form">
         <div className="form-group">
           <label htmlFor="title">Title:</label>
           <input
             type="text"
+            placeholder="Title..."
             id="title"
             name="title"
             value={advisory.title}
@@ -24,6 +25,7 @@ const AddAdvisory = ({ handleChange, handleSubmit, advisory }) => {
           <textarea
             id="description"
             name="description"
+            placeholder="Short description..."
             value={advisory.description}
             onChange={(e) => handleChange(e.target.name, e.target.value)}
             required
@@ -57,6 +59,7 @@ const AddAdvisory = ({ handleChange, handleSubmit, advisory }) => {
             type="text"
             id="cityName"
             name="cityName"
+            placeholder="City name..."
             value={advisory.cityName}
             onChange={(e) => handleChange(e.target.name, e.target.value)}
             required
@@ -68,14 +71,15 @@ const AddAdvisory = ({ handleChange, handleSubmit, advisory }) => {
             type="text"
             id="pincode"
             name="pincode"
+            placeholder="Pin-Code..."
             value={advisory.pincode}
             onChange={(e) => handleChange(e.target.name, e.target.value)}
             required
           />
         </div>
-        <button type="submit" className="broadcast">
-          <BsFillMegaphoneFill size={22} className="megaPhone" />
-          Broadcast
+        <button type="submit" className="submit-button">
+          <BsFillMegaphoneFill size={22} />
+          <span>Broadcast</span>
         </button>
       </form>
     </div>
