@@ -6,20 +6,29 @@
   font-family: "Inter", sans-serif;
 }
 
+body {
+  overflow-x: hidden;
+}
 
-.container {
+
+.MainContainer {
+  width: 100%;
   display: flex;
   overflow-x: hidden;
-  margin: 0 108px 0 4rem !important;
+  margin: 0 2rem 0 1rem !important;
 }
 
 .menuContainer {
-  width: 200px;
-  padding: 5px 20px;
+  margin: 0 2rem;
+  width: 350px;
+  min-height: 93vh;
+  overflow-y: hidden;
+  padding: 3rem 1rem;
   border-right: 2px solid black;
 }
 
 .contentContainer {
-  padding: 5px 20px;
+  margin: 1rem;
+  padding: 1rem 2rem;
   width: 100%;
 }
