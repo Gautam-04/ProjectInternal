@@ -1,4 +1,3 @@
-import { Button } from 'react-bootstrap';
 import { Route, Routes } from 'react-router-dom';
 import Auth from './pages/Auth/Auth';
 import Home from './pages/Home/Home';

@@ -16,7 +16,6 @@ function SignUp() {
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
 
-    const data = {name,employerId,password};
 
     const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -26,7 +25,7 @@ function SignUp() {
     e.preventDefault();
     setLoading(true);
     
-    const data = { name, employerId, password, role };
+    const data = { name, employerId,  role,password };
 
     try {
       const response = await axios.post(
@@ -36,7 +35,12 @@ function SignUp() {
 
       if (response.status === 200) {
         toast.success("Registration successful!");
-        navigate("/"); // Redirect to login or another page if necessary
+        navigate("/home"); 
+        const accessToken = response.data.accessToken;
+        localStorage.setItem('at',accessToken);
+        const role = response.data.createdUser.role;
+        localStorage.setItem('role', role);
+        
       } else {
         toast.error("Registration failed. Please try again.");
       }

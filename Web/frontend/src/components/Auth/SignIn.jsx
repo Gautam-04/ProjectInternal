@@ -14,8 +14,6 @@ function SignIn() {
 
     const navigate = useNavigate();
 
-    const data = {employerId,password};
-
     const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
@@ -32,7 +30,11 @@ async function handleClick(e) {
       console.log(result);
       if (result.status === 200) {
         toast.success("Registration successful!");
-        navigate("/login"); // Redirect to login or another page if necessary
+        navigate("/home"); 
+        const accessToken = result.data.accessToken;
+        localStorage.setItem('at',accessToken);
+        const role = result.data.loggedInUser.role;
+        localStorage.setItem('role', role);
       } else {
         toast.error("Registration failed. Please try again.");
       }

@@ -37,7 +37,7 @@ const options = {
 const accessToken = generateToken(user._id);
 
 
-return res.status(200).cookie("accessToken",accessToken,options).json({message: "User created succesfully",createdUser})
+return res.status(200).cookie("accessToken",accessToken,options).json({message: "User created succesfully",createdUser,accessToken})
 
 }
 
@@ -66,7 +66,7 @@ const loggedInUser = await User.findById(existedUser._id).select("-password")
 
 const accessToken = generateToken(loggedInUser._id);
 
-return res.status(200).cookie("accessToken",accessToken,options).json({message: "User Found Successfully",loggedInUser})
+return res.status(200).cookie("accessToken",accessToken,options).json({message: "User Found Successfully",loggedInUser,accessToken})
 }
 
 const logout = async(req,res)=>{

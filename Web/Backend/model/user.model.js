@@ -5,7 +5,7 @@ import bcrypt from "bcrypt";
 const userSchema = new mongoose.Schema(
   {
     name: {type: String,required: true},
-    employerId: {type: String, required: true},
+    employerId: {type: String, required: true,unique: true},
     role: {type: String,required: true,enum:['Admin','superAdmin'],default: "Admin"},
     password: {type: String,required: true}
   },

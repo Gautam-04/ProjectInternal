@@ -1,8 +1,17 @@
 import React from 'react'
+import { useUser } from '../../context/UserProvider'
 
 function Home() {
+  const {user}  = useUser();
   return (
-    <div>Home</div>
+    <>
+      hello
+      {user && user.role ? (
+        <p>Welcome, your role is: {user.role}</p>
+      ) : (
+        <p>Loading user information...</p>
+      )}
+    </>
   )
 }
 
