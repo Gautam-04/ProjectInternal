@@ -17,11 +17,10 @@ const [latitude, setLatitude] = useState(null);
           setError(error.message);
         }
       );
-      console.log(latitude,longitude)
     } else {
       setError("Geolocation is not supported by this browser.");
     }
-  }, []);
+  }, [latitude,longitude]);
 
 
   return (

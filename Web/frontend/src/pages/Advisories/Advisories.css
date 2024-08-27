@@ -1,0 +1,116 @@
+.advisory-panel {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: auto; /* Enable scrolling if needed */
+}
+
+.advisory-panel::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for WebKit browsers */
+}
+
+.advisory-panel {
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+.advisories-container,
+.disasters-container {
+    flex: 1; /* Flex grow to fill available space */
+    margin: auto;
+    max-width: 50%; /* Maximum width for each container */
+    border-radius: 5%; /* Rounded corners */
+    padding: 20px;
+    box-sizing: border-box; /* Include padding and border in total width and height */
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap if needed */
+    gap: 15px; /* Space between items */
+}
+
+.header {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem; /* Font size for the header */
+}
+
+.form-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically if desired */
+    height: 100%; /* Ensure container takes full height if needed */
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Align items vertically in the center */
+    padding: 5px;
+    gap: 10px; /* Space between label and input */
+}
+
+.form-group label {
+    font-weight: bold;
+    color: black;
+    flex: 0 0 25%; /* Adjust width for label */
+    margin-right: 10px; /* Space between label and input */
+    display: flex;
+    align-items: center; /* Center vertically in the available space */
+}
+
+.form-group input,
+.form-group textarea {
+    flex: 1; /* Fill available space */
+    padding: 8px;
+    border-radius: 7px;
+    border: solid 1px black;
+    font-size: 1rem;
+    color: black;
+    display: flex;
+    align-items: center; /* Center text vertically */
+}
+
+.form-group input:active,
+.form-group textarea:active {
+    border: solid 0.5px grey; /* Subtle change on active state */
+}
+
+/* Optional: Ensure form elements are compact */
+.form-group input,
+.form-group textarea {
+    height: 2rem; /* Adjust height to make it compact */
+    line-height: 2rem; /* Align text vertically in the middle */
+}
+
+
+button[type="submit"] {
+    display: flex;
+    margin: auto;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 50px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1.15rem;
+    background-color: blue;
+    color: white;
+    transition: background-color 0.2s ease-in-out;
+    cursor: pointer;
+    border: none;
+}
+
+button[type="submit"]:hover {
+    background-color: #66c; /* Hover effect */
+}
+
+.megaPhone {
+    margin-right: 5%;
+}
+
+@media (max-width: 500px) {
+    button[type="submit"] {
+        width: 80%; /* Adjust button width on smaller screens */
+    }
+}
