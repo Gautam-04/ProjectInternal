@@ -1,116 +1,126 @@
+/* Container for the entire advisory panel */
 .advisory-panel {
     display: flex;
-    flex-direction: column;
-    margin: auto;
-    width: 100%;
+    flex-direction: row;
+    margin: 0 auto;
     height: 100vh; /* Full viewport height */
     overflow: auto; /* Enable scrolling if needed */
 }
 
+/* Hide scrollbar for WebKit browsers */
 .advisory-panel::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for WebKit browsers */
+    display: none;
 }
 
+/* Hide scrollbar for Firefox */
 .advisory-panel {
-    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    scrollbar-width: none;
 }
 
+/* Container for advisory and disaster sections */
 .advisories-container,
 .disasters-container {
     flex: 1; /* Flex grow to fill available space */
     margin: auto;
     max-width: 50%; /* Maximum width for each container */
-    border-radius: 5%; /* Rounded corners */
-    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    padding-top:10px;
     box-sizing: border-box; /* Include padding and border in total width and height */
     display: flex; /* Use flexbox for layout */
     flex-wrap: wrap; /* Allow items to wrap if needed */
     gap: 15px; /* Space between items */
 }
 
+/* Header styling */
 .header {
-    padding: 10px;
+    padding: 15px;
     display: flex;
+    margin: auto;
     justify-content: center;
-    font-size: 1.5rem; /* Font size for the header */
+    font-size: 2.2rem; /* Slightly larger font size for better visibility */
+    color: #333; /* Darker color for better readability */
 }
 
+/* Form container to center the form */
 .form-container {
     display: flex;
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically if desired */
     height: 100%; /* Ensure container takes full height if needed */
+    padding: 20px; /* Add padding for better spacing */
 }
 
+/* Form group styling */
 .form-group {
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem; /* Reduced margin for compactness */
     display: flex;
     flex-direction: row;
     align-items: center; /* Align items vertically in the center */
-    padding: 5px;
-    gap: 10px; /* Space between label and input */
+    padding: 5px; /* Reduced padding */
+    gap: 8px; /* Reduced space between label and input */
 }
 
+/* Label styling in form group */
 .form-group label {
     font-weight: bold;
-    color: black;
-    flex: 0 0 25%; /* Adjust width for label */
-    margin-right: 10px; /* Space between label and input */
+    color: #333; /* Darker color for better readability */
+    flex: 0 0 30%; /* Adjust width for label */
+    margin-right: 8px; /* Reduced space between label and input */
     display: flex;
     align-items: center; /* Center vertically in the available space */
 }
 
+/* Input and textarea styling */
 .form-group input,
 .form-group textarea {
     flex: 1; /* Fill available space */
-    padding: 8px;
-    border-radius: 7px;
-    border: solid 1px black;
-    font-size: 1rem;
-    color: black;
+    padding: 6px; /* Reduced padding */
+    border-radius: 6px; /* Slightly smaller border radius */
+    border: 1px solid #ccc; /* Softer border color */
+    font-size: 0.9rem; /* Smaller font size */
+    color: #333; /* Darker text color for better readability */
     display: flex;
     align-items: center; /* Center text vertically */
+    height: 1.8rem; /* Adjusted height for compactness */
+    line-height: 1.8rem; /* Align text vertically in the middle */
 }
 
+/* Active state for input and textarea */
 .form-group input:active,
 .form-group textarea:active {
-    border: solid 0.5px grey; /* Subtle change on active state */
+    border: 1px solid #888; /* Slightly darker border on active state */
 }
 
-/* Optional: Ensure form elements are compact */
-.form-group input,
-.form-group textarea {
-    height: 2rem; /* Adjust height to make it compact */
-    line-height: 2rem; /* Align text vertically in the middle */
-}
-
-
+/* Submit button styling */
 button[type="submit"] {
     display: flex;
     margin: auto;
     flex-direction: row;
     align-items: center;
-    padding: 10px 50px;
-    border-radius: 30px;
+    padding: 8px 30px; /* Reduced padding */
+    border-radius: 25px; /* Smaller border radius */
     font-weight: 600;
-    font-size: 1.15rem;
-    background-color: blue;
+    font-size: 1rem; /* Smaller font size */
+    background-color: #007bff; /* Primary blue color */
     color: white;
-    transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.3s ease-in-out; /* Smoother transition */
     cursor: pointer;
     border: none;
 }
 
+/* Hover effect for submit button */
 button[type="submit"]:hover {
-    background-color: #66c; /* Hover effect */
+    background-color: #0056b3; /* Darker blue on hover */
 }
 
+/* Adjust margin for specific elements */
 .megaPhone {
-    margin-right: 5%;
+    margin-right: 10px; /* Increased margin for better spacing */
 }
 
+/* Responsive styling for smaller screens */
 @media (max-width: 500px) {
     button[type="submit"] {
-        width: 80%; /* Adjust button width on smaller screens */
+        width: 90%; /* Adjust button width on smaller screens */
     }
 }

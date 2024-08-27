@@ -1,50 +1,89 @@
-.single-card {
+/* Container for each advisory item */
+.single-advisory {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 10px;
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid red;
+  padding: 10px; /* Reduced padding for compactness */
+  border-radius: 8px; /* Reduced border-radius for a more compact look */
+  border: none; /* Removed border */
+  background-color: white; /* Ensure background is white */
+  border:1px solid red;
 }
 
+/* Advisory card styling */
 .advisory-card {
-  text-align: center; /* Center-align the text */
+  display: flex;
+  flex-direction: column;
   background-color: white;
   border: none;
-  color: gray;
-  padding: 10px 15px;
-  width: 30vw;
-  height: 25vh;
-  box-sizing: border-box;
+  color: #333; /* Darker text color for readability */
+  padding: 8px; /* Reduced padding */
+  width: 25vw; /* Reduced width for compactness */
+  height: 25vh; /* Reduced height for compactness */
+  box-sizing: border-box; /* Ensure padding and border are included in width and height */
 }
 
+/* Icon container styling */
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title styling within advisory card */
 .advisory-title {
-  font-size: 1.2rem; /* Larger font size for the title */
-  color: black;
+  font-weight: 700;
+  font-size: 1rem; /* Further reduced font size for the title */
+  color: #333; /* Dark color for readability */
+  margin-bottom: 4px; /* Reduced space below the title */
 }
 
-.advisory-details {
-  font-size: 0.7rem; /* Smaller font size for details */
-  color: gray;
-  gap: 10px;
+/* Styling for advisory description */
+.advisory-description {
+  height: 7vh;
+  font-size: 0.8rem; /* Smaller font size for description */
+  color: #555; /* Darker gray color for text */
+  margin-bottom: 5px; /* Reduced space below description */
 }
 
-.advisory-date-time{
-    display:flex;
-    flex-direction:row;
-}
-
-.advisory-date-time,
-.advisory-location {
-  display: block;
+/* Container for date, time, city, and pincode */
+.advisory-time {
+  display: flex;
   flex-direction: row;
+  gap: 20px; /* Reduced space between each meta item */
+  font-size: 0.7rem; /* Smaller font size for meta information */
+  color: #777; /* Lighter gray for text */
+  margin-bottom: 8px; /* Reduced space below meta section */
 }
+.advisory-city {
+  display: flex;
+  flex-direction: row;
+  gap: 20px; /* Reduced space between each meta item */
+  font-size: 0.7rem; /* Smaller font size for meta information */
+  color: #777; /* Lighter gray for text */
+  margin-bottom: 8px; /* Reduced space below meta section */
+}
+
+/* Delete button styling */
 .delete-button {
-    margin-top:5px;
-    padding:2px;
+  padding: 4px 8px; /* Reduced padding for a smaller button */
+  margin-top: 3rem; /* Adjusted margin for button placement */
+  background-color: #f44336; /* Red background for delete button */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
-.disasters-container{
-    display:flex;
-    flex-direction:row;
+
+.delete-button:hover {
+  background-color: #d32f2f; /* Darker red on hover */
+}
+
+/* Container for disaster items */
+.disasters-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  gap: 10px; /* Reduced space between items */
+  justify-content: center; /* Center items horizontally */
 }
