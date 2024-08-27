@@ -15,7 +15,7 @@ function VerifyCard({ ip, latitude, logitude, time, verified, rescued, onVerify,
 
     return (
         <>
-            <Card bg='danger' className='verifyCard'>
+            <Card bg={!rescued? 'danger' : 'success'} className='verifyCard'>
                 <Card.Header>IP Address: {ip}</Card.Header>
                 <Card.Body>
                     <blockquote className="blockquote mb-0">

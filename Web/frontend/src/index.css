@@ -8,7 +8,7 @@
 .container {
   display: flex;
   overflow-x: hidden;
-  margin: 0 0 0 2rem !important;
+  margin: 0 2rem 0 1rem !important;
 }
 
 .menuContainer {
