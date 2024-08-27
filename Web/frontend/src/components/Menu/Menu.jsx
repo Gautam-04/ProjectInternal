@@ -2,7 +2,7 @@ import React, {useEffect,useState} from 'react';
 import './Menu.css';
 import { Link } from 'react-router-dom';
 import { AiFillHome } from 'react-icons/ai';
-import { MdGroups2, MdHome, MdMore, MdOutlineVerifiedUser } from "react-icons/md";
+import {  MdHome, MdMore, MdOutlineVerifiedUser } from "react-icons/md";
 import { PiTruckDuotone,PiMegaphoneDuotone  } from "react-icons/pi";
 import { CiBellOn } from "react-icons/ci";
 import { IoAnalyticsSharp } from 'react-icons/io5';
@@ -10,7 +10,7 @@ import { IoAnalyticsSharp } from 'react-icons/io5';
 const superAdmin = [
   {
     id: 1,
-    title: "home",
+    title: "Home",
     url: "/home",
     icon: <MdHome />
   },
