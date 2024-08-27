@@ -17,25 +17,25 @@ const menu = [
     id: 2,
     title: "Verify SOS Credibility",
     url: "/home/verifysos", // Updated URL
-    icon: <MdOutlineVerifiedUser />
+    icon: <MdOutlineVerifiedUser size={22}/>
   },
   {
     id: 3,
-    title: "Issue Notifications/Advisories",
+    title: "Issue Advisories",
     url: "/home/advisories", // Updated URL
-    icon: <PiMegaphoneDuotone  />
+    icon: <PiMegaphoneDuotone  size={22}/>
   },
   {
     id: 4,
     title: "Deploy and Track Rescue Forces",
     url: "/home/track", // Updated URL
-    icon: <PiTruckDuotone  />
+    icon: <PiTruckDuotone  size={22}/>
   },
   {
     id: 5,
     title: "Alert Early Warning",
     url: "/home/alert", // Updated URL
-    icon: <CiBellOn  />
+    icon: <CiBellOn  size={22}/>
   },
 ];
 
