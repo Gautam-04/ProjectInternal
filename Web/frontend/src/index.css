@@ -8,12 +8,13 @@
 .container {
   display: flex;
   overflow-x: hidden;
-  margin: 0 108px 0 4rem !important;
+  margin: 0 0 0 2rem !important;
 }
 
 .menuContainer {
   width: 250px;
-  padding: 5px 20px;
+  height: 93vh;
+  padding: 5rem 20px;
   border-right: 2px solid black;
 }
 
