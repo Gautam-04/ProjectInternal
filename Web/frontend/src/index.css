@@ -1,4 +1,23 @@
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.container {
+  display: flex;
+  overflow-x: hidden;
+  margin: 0 108px 0 4rem !important;
+}
+
+.menuContainer {
+  width: 250px;
+  padding: 5px 20px;
+  border-right: 2px solid black;
+}
+
+.contentContainer {
+  padding: 5px 20px;
+  width: 100%;
 }

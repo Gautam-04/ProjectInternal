@@ -1,5 +1,4 @@
 import React,{useState} from 'react'
-import Stack from "react-bootstrap/Stack";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 import SignUp from '../../components/Auth/SignUp';
