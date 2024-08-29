@@ -1,18 +1,15 @@
 .login-form {
-    margin: 10% auto;
-    gap: 1rem;
-    width: 30%;
-    height: fit-content;
-    color: black;
-
-    .nav-link {
-        color: black;
-    }
-
-    .nav-link:hover {
-        color: black;
-    }
-}
+    margin: 10% auto; /* Center form vertically and horizontally with top margin */
+    padding: 20px; /* Add padding inside the form for spacing */
+    gap: 10px; /* Space between form elements */
+    width: 30%; /* Width of the form */
+    height: fit-content; /* Adjust height based on content */
+    color: black; /* Text color inside the form */
+    background-color: #fff; /* White background for the form */
+    border-radius: 8px; /* Slightly rounded corners */
+    border: 1px solid #ddd; /* Light border around the form */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visibility */
+  }
 
 .login-button {
     padding: 0 30px;

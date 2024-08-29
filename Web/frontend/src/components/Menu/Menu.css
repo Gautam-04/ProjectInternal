@@ -1,5 +1,4 @@
 .menu {
-
     .item {
         display: flex;
         flex-direction: column;
@@ -21,11 +20,23 @@
             padding: 10px;
             border-radius: 5px;
             text-decoration: none;
+            transition: background-color 0.3s ease;
 
             &:hover {
                 background-color: blue;
                 color: white
             }
         }
+    }
+}
+
+.manyMore {
+    pointer-events: none;
+    background-color: blue;
+    opacity: 0.5;
+    border-radius: 5px;
+
+    .listItem {
+        color: white;
     }
 }
