@@ -43,17 +43,6 @@ const AddAdvisory = ({ handleChange, handleSubmit, advisory }) => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="time">Time:</label>
-          <input
-            type="time"
-            id="time"
-            name="time"
-            value={advisory.time}
-            onChange={(e) => handleChange(e.target.name, e.target.value)}
-            required
-          />
-        </div>
-        <div className="form-group">
           <label htmlFor="cityName">City Name:</label>
           <input
             type="text"

@@ -7,6 +7,9 @@ const UserContext = createContext();
 
 const UserProvider = ({children}) => {
     const [user,setUser] = useState();
+    const [Advisories,setAdvisories] = useState(true);
+    const [verifiedSos,setVerifiedSos] = useState(true);
+    const [alert,setAlert] = useState(true);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -23,7 +26,7 @@ const UserProvider = ({children}) => {
   }, [navigate]);
 
   return (
-    <UserContext.Provider value={{ user }}>
+    <UserContext.Provider value={{ user,Advisories,verifiedSos,alert }}>
       {children}
     </UserContext.Provider>
   );
